@@ -25,7 +25,8 @@ public class RoomDetails implements RoomBillComponent {
     public void validateTypeOfRoom() {
         if (!typeOfRoom.equalsIgnoreCase("Standard") &&                  //
                 !typeOfRoom.equalsIgnoreCase("Deluxe") &&
-                !typeOfRoom.equalsIgnoreCase("Cottage"))
+                !typeOfRoom.equalsIgnoreCase("Cottage") &&
+                !typeOfRoom.equalsIgnoreCase("Suite"))
         {
             System.out.println("Error - Invalid room type.");
         }
