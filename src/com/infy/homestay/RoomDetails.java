@@ -16,8 +16,10 @@ public class RoomDetails implements RoomBillComponent {
         this.noOfExtraPersons = noOfExtraPersons;
         this.noOfDaysOfStays = noOfDaysOfStays;
     }
-    public void validateNoOfExtraPerson() {
-        if (noOfExtraPersons > 2) {
+    public void validateNoOfExtraPerson()
+    {
+        if (noOfExtraPersons > 2)
+        {
             System.out.println("Error - Maximum of 2 extra persons allowed per room.");
         }
     }
@@ -27,7 +29,6 @@ public class RoomDetails implements RoomBillComponent {
         if (!typeOfRoom.equalsIgnoreCase("Standard") &&                  //
                 !typeOfRoom.equalsIgnoreCase("Deluxe") &&
                 !typeOfRoom.equalsIgnoreCase("Cottage"))
-                //&& !typeOfRoom.equalsIgnoreCase("Suite"))
         {
             System.out.println("Error - Invalid room type.");
         }
