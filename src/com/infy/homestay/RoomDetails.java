@@ -16,28 +16,24 @@ public class RoomDetails implements RoomBillComponent {
         this.noOfExtraPersons = noOfExtraPersons;
         this.noOfDaysOfStays = noOfDaysOfStays;
     }
-    public void validateNoOfExtraPerson()
-    {
-        if (noOfExtraPersons > 2)
-        {
+    public void validateNoOfExtraPerson() {
+        if (noOfExtraPersons > 2) {
             System.out.println("Error - Maximum of 2 extra persons allowed per room.");
         }
     }
 
-    public void validateTypeOfRoom()
-    {
+    public void validateTypeOfRoom() {
         if (!typeOfRoom.equalsIgnoreCase("Standard") &&                  //
                 !typeOfRoom.equalsIgnoreCase("Deluxe") &&
-                !typeOfRoom.equalsIgnoreCase("Cottage"))
+                !typeOfRoom.equalsIgnoreCase("Cottage") &&
+                !typeOfRoom.equalsIgnoreCase("Suite"))
         {
             System.out.println("Error - Invalid room type.");
         }
     }
 
-    public void validateNoOfDaysOfStay()
-    {
-        if (noOfDaysOfStays < 1 || noOfDaysOfStays > 15)
-        {
+    public void validateNoOfDaysOfStay() {
+        if (noOfDaysOfStays < 1 || noOfDaysOfStays > 15) {
             System.out.println("Error - Stay must be between 1 and 15 days.");
         }
     }
@@ -47,14 +43,10 @@ public class RoomDetails implements RoomBillComponent {
         validateNoOfExtraPerson();
 
         double baseRoomFare = 0;
-        switch (typeOfRoom.toLowerCase())
-        {
-            case "standard": baseRoomFare = 2500;
-            break;
-            case "deluxe":   baseRoomFare = 3500;
-            break;
-            case "cottage":  baseRoomFare = 5500;
-            break;
+        switch (typeOfRoom.toLowerCase()) {
+            case "standard": baseRoomFare = 2500; break;
+            case "deluxe":   baseRoomFare = 3500; break;
+            case "cottage":  baseRoomFare = 5500; break;
         }
 
         double totalBill = (noOfDaysOfStays * baseRoomFare) +
