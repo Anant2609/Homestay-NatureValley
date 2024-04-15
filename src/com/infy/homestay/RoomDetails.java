@@ -49,7 +49,7 @@ public class RoomDetails implements RoomBillComponent {
         double baseRoomFare = 0;
         switch (typeOfRoom.toLowerCase())
         {
-            case "standard": baseRoomFare = 2500;
+            case "standard": baseRoomFare = 2000;
             break;
             case "deluxe":   baseRoomFare = 3500;
             break;
