@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 
 public class Tester {
     public static void main(String[] args) {
-        final Logger logger = Logger.getLogger("Tester");
+        //final Logger logger = Logger.getLogger("Tester");
         RoomDetails StandardroomDetails = new RoomDetails("John", "Standard", 4, 2);
         RoomDetails DeluxeroomDetails = new RoomDetails("Max", "Deluxe", 2, 4);
         RoomDetails CottageroomDetails = new RoomDetails("Will", "Cottage", 2, 3);
